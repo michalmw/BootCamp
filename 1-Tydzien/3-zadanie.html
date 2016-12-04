@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2 Zadanie</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+</head>
+<body>
+	
+
+	<script>
+		
+		$(document).ready(function() {
+
+			// -wszystkie elementy <div>, posiadające zarówno klasę “grid” oraz klasę “grid-12”.
+		
+			$('.grid.grid-12').css('background', 'red');
+
+			// -wszystkie elementy <a>, których atrybut “href" zaczyna się na “http”, znajdujące się w elemencie o klasie “nav”
+
+			$('.nav').find('a[href^="http"');
+
+			// -wszystkie elementy <input>, których typ to “radio” lub “checkbox” oraz dodatkowo nie są aktualnie zaznaczone (checked).
+			
+			$('input[type=checkbox]:not(":checked"), input[type=radio]:not(":checked")').data('id');
+
+
+			
+			// -wyłącznie pierwszy element <p>, który jest pusty (nie zawiera dzieci) oraz znajduje się w elemencie <div> z identyfikatorem “text”
+			$('.guide-content').find('p:first').empty();
+
+			
+			// -wszystkie elementy z klasą “pagination-item”, które nie są elementem <span>
+			
+			$('.pagination-item').not('span');
+
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
