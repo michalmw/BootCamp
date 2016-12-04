@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4 Zadanie</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+</head>
+<body>
+	
+	<form action="javascript:;">
+		<input type="text" id="name" placeholder="Name"> <br>
+		<button id="addName">Add</button>
+	</form>
+	<ul class="nameList">
+		
+	</ul>
+
+	<script>
+		$(document).ready(function() {
+
+			$('#addName').on('click', function(event) {
+				event.stopPropagation();
+				console.log('e');
+				var newName = $('#name').val();
+
+
+				if(newName === '')
+					alert('Musisz podać imie');
+				else {
+
+					$('.nameList').append('<li>' + newName + '</li>');
+					$('#name').val();
+
+				}
+
+			});
+		});
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
