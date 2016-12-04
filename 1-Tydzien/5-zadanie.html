@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5 Zadanie</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+</head>
+<body>
+	
+	<ul id="userList">
+		
+	</ul>
+	<a id="downloadUser">Downalod User</a>
+	<script>
+		$(document).ready(function() {
+
+			$('#downloadUser').on('click', function() {
+
+				$.getJSON('https://jsonplaceholder.typicode.com/users', function(data) {
+					var user;
+					$(data).each(function(i, e) {
+
+						user = 'Imie '+ e.name + '<br/ >Username: ' + e.username + '<br />Email: ' + e.email + '<br />Telefon: ' + e.phone
+
+						$('#userList').append('<li>' + user +'</li>');
+
+					});
+				});
+
+
+			});
+		});
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
